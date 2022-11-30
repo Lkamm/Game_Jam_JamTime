@@ -2,7 +2,7 @@ extends KinematicBody2D
 
 onready var SM = $StateMachine
 
-var health = 25
+var health = 5
 var defense = 5
 var velocity = Vector2.ZERO
 var jump_power = Vector2.ZERO
@@ -114,11 +114,8 @@ func do_damage(d):
 	if health <= 0:
 		Global.player = null
 		queue_free()
-	
-
 
 func die():
-	print("died")
 	Global.player = null
 	queue_free()
 
