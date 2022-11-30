@@ -26,7 +26,7 @@ Assets, or resources used
 
 Daniel Gramling: Sprite Artist
 
-Crystal Liou:
+Crystal Liou: Sound
 
 Garret Bigs: Programmer
 
