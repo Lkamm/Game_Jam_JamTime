@@ -8,7 +8,8 @@ How you thought about or interpreted the theme
 ## Game Play
 Objective
 
-Game-play instructions
+Game-play instructions:
+2D platformer: WASD and [Space]
 
 ## Impediments
 Struggles or surprises you encountered during the development of the game
