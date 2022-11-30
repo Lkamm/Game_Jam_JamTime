@@ -10,11 +10,12 @@ var score = 5
 
 func _physics_process(_delta):
 	if not $Tween.is_active():
+		$Sprite.play()
 		var constraint = constraint_left
-		$Sprite.flip_h = true
+		$Sprite.flip_h = false
 		if position != constraint_right:
 			constraint = constraint_right
-			$Sprite.flip_h = false
+			$Sprite.flip_h = true
 		$Tween.interpolate_property(self, "position", position, constraint, speed, Tween.TRANS_EXPO, Tween.EASE_IN)
 		$Tween.start()
 		

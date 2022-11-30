@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 onready var SM = $StateMachine
 
-var health = 80
-var defense = 15
+var health = 25
+var defense = 5
 var velocity = Vector2.ZERO
 var jump_power = Vector2.ZERO
 var direction = 1
@@ -12,14 +12,14 @@ var damage = 25
 
 export var gravity = Vector2(0,30)
 
-export var move_speed = 20
+export var move_speed = 35
 export var max_move = 220
 
-export var jump_speed = 140
-export var max_jump = 600
+export var jump_speed = 170
+export var max_jump = 1400
 
-export var leap_speed = 140
-export var max_leap = 600
+export var leap_speed = 170
+export var max_leap = 1400
 
 var moving = false
 var is_jumping = false
@@ -118,7 +118,7 @@ func do_damage(d):
 
 
 func die():
-	print(health)
+	print("died")
 	Global.player = null
 	queue_free()
 

@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var meatball = load("res://Weapons/Meatball")
+var meatball = load("res://Weapons/MeatBall")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
