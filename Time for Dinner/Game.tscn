@@ -1,4 +1,8 @@
-[gd_scene format=2]
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Enemy/Enemy_Container.gd" type="Script" id=1]
+
+[sub_resource type="Environment" id=1]
 
 [node name="Game" type="Node2D"]
 
@@ -6,20 +10,11 @@
 
 [node name="Player" type="KinematicBody2D" parent="Player_Container"]
 
-[node name="Navigation2D" type="Navigation2D" parent="."]
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
 
-[node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
-
-[node name="Background" type="TileMap" parent="."]
-format = 1
-
-[node name="Ground" type="TileMap" parent="."]
-format = 1
-
-[node name="Playground" type="TileMap" parent="."]
-format = 1
+[node name="Timer" type="Timer" parent="."]
+wait_time = 120.0
 
 [node name="Enemy_Container" type="Node2D" parent="."]
-
-[node name="Foreground" type="TileMap" parent="."]
-format = 1
+script = ExtResource( 1 )
