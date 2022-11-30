@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 onready var SM = $StateMachine
 
-var health = 5
-var defense = 5
+var health = 35
+var defense = 10
 var velocity = Vector2.ZERO
 var jump_power = Vector2.ZERO
 var direction = 1
