@@ -130,7 +130,7 @@ text = "Quit"
 position = Vector2( 508, 86 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 15 )
-frame = 1
+frame = 5
 playing = true
 
 [connection signal="pressed" from="ColorRect/Play" to="." method="_on_Play_pressed"]
