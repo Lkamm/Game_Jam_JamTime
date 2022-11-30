@@ -1,10 +1,11 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Assets/pasta_flloor.png" type="Texture" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
 [ext_resource path="res://Player/Player_Container.gd" type="Script" id=3]
 [ext_resource path="res://StateMachine/Camera.gd" type="Script" id=4]
 [ext_resource path="res://Assets/Kitchen floor (1).png" type="Texture" id=5]
+[ext_resource path="res://Weapons/Weapons_Container.gd" type="Script" id=6]
 
 [sub_resource type="NavigationPolygon" id=6]
 vertices = PoolVector2Array( -176, -784, -176, -448, -192, 192 )
@@ -113,6 +114,12 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 } ]
 2/z_index = 0
 
+[sub_resource type="CircleShape2D" id=9]
+
+[sub_resource type="CircleShape2D" id=10]
+
+[sub_resource type="CircleShape2D" id=11]
+
 [node name="Game" type="Node2D"]
 
 [node name="Navigation2D" type="Navigation2D" parent="."]
@@ -136,7 +143,7 @@ format = 1
 tile_set = SubResource( 5 )
 collision_layer = 2
 format = 1
-tile_data = PoolIntArray( -65539, 2, 0, -3, 2, 0, 65533, 2, 0, 131069, 2, 0, 196605, 2, 0, 262141, 2, 0, 327677, 2, 0, 393213, 2, 0, 327689, 2, 0, 327690, 2, 0, 327691, 2, 0, 327692, 2, 0, 327693, 2, 0, 327694, 2, 0, 327695, 2, 0, 327696, 2, 0, 327697, 2, 0, 327698, 2, 0, 327699, 2, 0, 327700, 2, 0, 327701, 2, 0, 327702, 2, 0, 327703, 2, 0, 327704, 2, 0, 327705, 2, 0, 458749, 2, 0, 458750, 2, 0, 458751, 2, 0, 393216, 2, 0, 393217, 2, 0, 393218, 2, 0, 393219, 2, 0, 393220, 2, 0, 393221, 2, 0, 393222, 2, 0, 393223, 2, 0, 393224, 2, 0, 393241, 2, 0 )
+tile_data = PoolIntArray( -196609, 2, 0, -262144, 2, 0, -262143, 2, 0, -262142, 2, 0, -262141, 2, 0, -262140, 2, 0, -262139, 2, 0, -262138, 2, 0, -262137, 2, 0, -262136, 2, 0, -131074, 2, 0, -196599, 2, 0, -65539, 2, 0, -131062, 2, 0, -3, 2, 0, -65526, 2, 0, 65533, 2, 0, 131069, 2, 0, 196605, 2, 0, 262141, 2, 0, 327677, 2, 0, 393213, 2, 0, 327689, 2, 0, 327690, 2, 0, 327691, 2, 0, 327692, 2, 0, 327693, 2, 0, 327694, 2, 0, 327695, 2, 0, 327696, 2, 0, 327697, 2, 0, 327698, 2, 0, 327699, 2, 0, 327700, 2, 0, 327701, 2, 0, 327702, 2, 0, 327703, 2, 0, 327704, 2, 0, 327705, 2, 0, 458749, 2, 0, 458750, 2, 0, 458751, 2, 0, 393216, 2, 0, 393217, 2, 0, 393218, 2, 0, 393219, 2, 0, 393220, 2, 0, 393221, 2, 0, 393222, 2, 0, 393223, 2, 0, 393224, 2, 0, 393241, 2, 0 )
 
 [node name="Platform" type="TileMap" parent="."]
 collision_layer = 2
@@ -146,8 +153,6 @@ format = 1
 script = ExtResource( 3 )
 
 [node name="Enemy_Container" type="Node2D" parent="."]
-
-[node name="Weapon_Container" type="Node2D" parent="."]
 
 [node name="Foreground" type="TileMap" parent="."]
 collision_layer = 0
@@ -168,3 +173,31 @@ visible = false
 [node name="HUD" type="Control" parent="CanvasLayer"]
 margin_right = 40.0
 margin_bottom = 40.0
+
+[node name="Weapons_Container" type="Node2D" parent="."]
+script = ExtResource( 6 )
+
+[node name="Cannon" type="Area2D" parent="Weapons_Container"]
+visible = false
+position = Vector2( 750, 300 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapons_Container/Cannon"]
+shape = SubResource( 9 )
+
+[node name="Trap" type="Area2D" parent="Weapons_Container"]
+visible = false
+position = Vector2( 1250, 300 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapons_Container/Trap"]
+shape = SubResource( 10 )
+
+[node name="Trap2" type="Area2D" parent="Weapons_Container"]
+visible = false
+position = Vector2( 1000, 300 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Weapons_Container/Trap2"]
+shape = SubResource( 11 )
+
+[connection signal="mouse_entered" from="Weapons_Container/Cannon" to="Weapons_Container" method="_on_Cannon_mouse_entered"]
+[connection signal="mouse_entered" from="Weapons_Container/Trap" to="Weapons_Container" method="_on_Trap_mouse_entered"]
+[connection signal="mouse_entered" from="Weapons_Container/Trap2" to="Weapons_Container" method="_on_Trap2_mouse_entered"]

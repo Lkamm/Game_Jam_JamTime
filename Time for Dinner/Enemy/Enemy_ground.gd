@@ -7,7 +7,7 @@ var dmg = 5
 var health = 15
 var defense = 5
 var score = 5
-
+var sauce = load("res://Ingredients/Food_Sauce.tscn")
 func _physics_process(_delta):
 	if not $Tween.is_active():
 		$Sprite.play()
@@ -27,6 +27,8 @@ func hp(d):
 	health -= d
 	if health <= 0:
 		queue_free()
+		var Sauce = sauce.instance()
+		Sauce.global_position = global_position
 		Global.update_score(100)		
 
 

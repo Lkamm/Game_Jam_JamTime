@@ -1,7 +1,7 @@
 extends Node
 var player = null
 var Player = load("res://Player/Player.tscn")
-var ingredients = []
+var Ingredients = []
 var day = 1
 var score = 0
 func _unhandled_input(_event):

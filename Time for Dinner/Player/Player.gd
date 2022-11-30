@@ -159,9 +159,18 @@ func _on_AttackAreaR_body_entered(body):
 	
 
 
-func _on_Food_Collection_body_entered(body):
-	if body.name.substr(0, 5) == "Food":
+#func _on_Food_Collection_body_entered(body):
+	#if body.name.substr(0, 4) == "Food":
+		#body.queue_free()
+		#Global.update_score(100)
+		#Global.Ingredients.append(body.name)
+		#print(body.name)
+		#print(Ingredients)
+		#print(Ingredients)
+
+
+func _on_Area2D_body_entered(body):
+	if body.name.substr(0,4) == "Food":
 		body.queue_free()
-		Global.update_score(100)
-		body.name.subtr(0,5).append(Ingredients)
-		print(Ingredients)
+		Global.Ingredients.append(body.food)
+		print(Global.Ingredients)
