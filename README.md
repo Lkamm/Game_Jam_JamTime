@@ -6,7 +6,7 @@ MSCH-C220 Game Jam, November 2022
 How you thought about or interpreted the theme
 
 ## Game Play
-Objective
+Objective: Kill and collect needed Ingredients in order defend oneself against hungry customers.  
 
 Game-play instructions:
 2D platformer: WASD and [Space]
