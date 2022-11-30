@@ -26,7 +26,7 @@ Daniel Gramling: Sprite Artist
 
 Crystal Liou:
 
-Garret Bigs:Programmer
+Garret Bigs: Programmer
 
 Brandon Sheley: Programmer
 
