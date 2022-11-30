@@ -9,6 +9,8 @@ var jump_power = Vector2.ZERO
 var direction = 1
 var isAttacking = false
 var damage = 25
+onready var Cookie = preload("res://Weapons/Cookie.tscn")
+
 
 export var gravity = Vector2(0,30)
 
@@ -25,7 +27,6 @@ var moving = false
 var is_jumping = false
 var double_jumped = false
 var should_direction_flip = true # wether or not player controls (left/right) can flip the player sprite
-
 
 func _physics_process(_delta):
 	velocity.x = clamp(velocity.x,-max_move,max_move)
@@ -73,6 +74,17 @@ func _unhandled_input(event):
 	if event.is_action_pressed("jump"):
 		$AttackArea/CollisionShape2D.disabled = true
 		$AttackAreaR/CollisionShape2D.disabled = true
+	if event.is_action_pressed("shoot"):
+		shoot()
+
+func shoot():
+	var cookie = Cookie.instance()
+	add_child(cookie)
+	cookie.position = position
+	cookie.launch(direction)
+	
+
+
 
 func set_animation(anim):
 	if $AnimatedSprite.animation == anim: return
