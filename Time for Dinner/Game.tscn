@@ -1,0 +1,7 @@
+[gd_scene format=2]
+
+[node name="Game" type="Node2D"]
+
+[node name="Player_Container" type="Node2D" parent="."]
+
+[node name="Player" type="KinematicBody2D" parent="Player_Container"]
