@@ -1,8 +1,8 @@
 # Game_Jam_JamTime
-# Project Name
+# Final Project: Game Jam
 MSCH-C220 Game Jam, November 2022
 
-## Theme
+## Time For Dinner
 How you thought about or interpreted the theme
 
 ## Game Play
