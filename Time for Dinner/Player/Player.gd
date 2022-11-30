@@ -78,10 +78,7 @@ func _unhandled_input(event):
 		shoot()
 
 func shoot():
-	var cookie = Cookie.instance()
-	add_child(cookie)
-	cookie.position = position
-	cookie.launch(direction)
+	pass
 	
 
 
