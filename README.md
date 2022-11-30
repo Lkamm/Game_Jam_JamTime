@@ -21,9 +21,13 @@ Assets, or resources used
 ## Future Development
 
 # Created by: Daniel's Gremlins
+
 Daniel Gramling: Sprite Artist
+
 Crystal Liou:
+
 Garret Bigs:Programmer
+
 Brandon Sheley: Programmer
 
 # ScreenShot
