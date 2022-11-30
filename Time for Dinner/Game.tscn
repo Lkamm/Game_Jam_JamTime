@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Enemy/Enemy_Container.gd" type="Script" id=1]
+
+[sub_resource type="Environment" id=1]
+
+[node name="Game" type="Node2D"]
+
+[node name="Player_Container" type="Node2D" parent="."]
+
+[node name="Player" type="KinematicBody2D" parent="Player_Container"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 120.0
+
+[node name="Enemy_Container" type="Node2D" parent="."]
+script = ExtResource( 1 )
