@@ -1,6 +1,6 @@
 extends Node
 var player = null
-var Player = null
+var Player = load("res://Player/Player.tscn")
 var ingredients = []
 var day = 1
 
