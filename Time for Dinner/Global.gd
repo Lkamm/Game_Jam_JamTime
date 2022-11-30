@@ -1,11 +1,12 @@
 extends Node
 var player = null
+var Player = null
 var ingredients = []
 var day = 1
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func _unhandled_input(_event):
+	if Input.is_action_pressed("quit"):
+		get_tree().quit()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
