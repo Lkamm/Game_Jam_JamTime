@@ -25,7 +25,8 @@ func hp(d):
 		d = 1
 	health -= d
 	if health <= 0:
-		queue_free()		
+		queue_free()
+		Global.update_score(100)
 
 
 func _on_Area2D_body_entered(body):

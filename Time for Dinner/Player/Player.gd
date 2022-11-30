@@ -11,7 +11,7 @@ var isAttacking = false
 var damage = 25
 onready var Cookie = preload("res://Weapons/Cookie.tscn")
 
-
+onready var Ingredients = []
 export var gravity = Vector2(0,30)
 
 export var move_speed = 35
@@ -157,3 +157,11 @@ func _on_AttackAreaR_body_entered(body):
 		body.hp(damage)
 
 	
+
+
+func _on_Food_Collection_body_entered(body):
+	if body.name.substr(0, 5) == "Food":
+		body.queue_free()
+		Global.update_score(100)
+		body.name.subtr(0,5).append(Ingredients)
+		print(Ingredients)

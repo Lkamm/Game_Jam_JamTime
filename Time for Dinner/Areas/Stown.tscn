@@ -180,6 +180,7 @@ constraint_right = Vector2( 3800, 220 )
 
 [node name="Enemy_flying" parent="Enemy_Container" instance=ExtResource( 7 )]
 position = Vector2( 2500, -150 )
+look_speed = 95
 
 [node name="Weapon_Container" type="Node2D" parent="."]
 
@@ -204,3 +205,5 @@ margin_right = 40.0
 margin_bottom = 40.0
 
 [node name="Effects" type="Node2D" parent="."]
+
+[node name="Ingredients_Container" type="Node2D" parent="."]
