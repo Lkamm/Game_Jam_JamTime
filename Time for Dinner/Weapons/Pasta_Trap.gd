@@ -14,9 +14,7 @@ func _ready():
 	pass # Replace with function body.
 
 func trap(body):
-	if body.name != "Player":
-		body.speed(0)
-		body.hp(5)
+	pass
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass

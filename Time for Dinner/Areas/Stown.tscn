@@ -181,33 +181,8 @@ position = Vector2( 7000, 280 )
 
 [node name="Food_Pasta" parent="Ingredients_Container" instance=ExtResource( 9 )]
 visible = false
-position = Vector2( 6550, 280 )
+
 
 [node name="Food_Pasta2" parent="Ingredients_Container" instance=ExtResource( 9 )]
 visible = false
-position = Vector2( 7300, 280 )
 
-[node name="Food_Pasta3" parent="Ingredients_Container" instance=ExtResource( 9 )]
-visible = false
-position = Vector2( 7400, 280 )
-
-[node name="Food_Pasta4" parent="Ingredients_Container" instance=ExtResource( 9 )]
-visible = false
-position = Vector2( 7500, 280 )
-
-[node name="Food_Pasta5" parent="Ingredients_Container" instance=ExtResource( 9 )]
-visible = false
-position = Vector2( 7600, 280 )
-
-[node name="Food_Pasta6" parent="Ingredients_Container" instance=ExtResource( 9 )]
-visible = false
-position = Vector2( 7700, 280 )
-
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
-color = Color( 0.12549, 0.137255, 0.203922, 1 )
-
-[node name="Bus_STOP" parent="." instance=ExtResource( 12 )]
-position = Vector2( 7993, 305 )
-
-[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
