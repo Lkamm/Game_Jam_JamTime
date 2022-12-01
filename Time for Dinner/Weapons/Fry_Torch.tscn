@@ -1,0 +1,11 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="ImageTexture" id=1]
+
+[node name="Fry_Torch" type="StaticBody2D"]
+
+[node name="Sprite" type="Sprite" parent="."]
+
+[node name="Light2D" type="Light2D" parent="."]
+texture = SubResource( 1 )
+color = Color( 0.835294, 0.443137, 0.027451, 1 )
