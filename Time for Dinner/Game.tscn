@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/pasta_flloor.png" type="Texture" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://Enemy/Enemy_Container.gd" type="Script" id=7]
 [ext_resource path="res://Weapons/Flag.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Weapons/Bus_STOP.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Weapons/MeatCannon.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Weapons/Pasta_Trap.tscn" type="PackedScene" id=11]
 
 [sub_resource type="NavigationPolygon" id=6]
 vertices = PoolVector2Array( -176, -784, -176, -448, -192, 192 )
@@ -189,12 +191,12 @@ position = Vector2( 750, 300 )
 shape = SubResource( 9 )
 
 [node name="Label" type="Label" parent="Weapons_Container/Cannon"]
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Meatball Cannon: Costs 2 Sauce"
+
+[node name="MeatCannon" parent="Weapons_Container/Cannon" instance=ExtResource( 10 )]
 visible = false
-margin_left = -122.0
-margin_top = -17.0
-margin_right = 74.0
-margin_bottom = -2.0
-text = "MeatBall Cannon: Cost 2 Sauce"
 
 [node name="Pasta_Trap" type="Area2D" parent="Weapons_Container"]
 position = Vector2( 1250, 300 )
@@ -203,12 +205,11 @@ position = Vector2( 1250, 300 )
 shape = SubResource( 10 )
 
 [node name="Label" type="Label" parent="Weapons_Container/Pasta_Trap"]
-visible = false
-margin_left = -65.0
-margin_top = -19.0
-margin_right = 114.0
-margin_bottom = -5.0
-text = "Pasta Trap: Cost 1 Pasta"
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Pasta Trap: Costs 1 Pasta"
+
+[node name="Pasta_Trap" parent="Weapons_Container/Pasta_Trap" instance=ExtResource( 11 )]
 
 [node name="Pasta_Trap2" type="Area2D" parent="Weapons_Container"]
 position = Vector2( 1000, 300 )
@@ -217,12 +218,11 @@ position = Vector2( 1000, 300 )
 shape = SubResource( 11 )
 
 [node name="Label" type="Label" parent="Weapons_Container/Pasta_Trap2"]
-visible = false
-margin_left = -67.0
-margin_top = -21.0
-margin_right = 84.0
-margin_bottom = -2.0
-text = "Pasta Trap: Cost 1 Pasta"
+margin_right = 40.0
+margin_bottom = 14.0
+text = "Pasta Trap: Costs 1 Pasta"
+
+[node name="Pasta_Trap" parent="Weapons_Container/Pasta_Trap2" instance=ExtResource( 11 )]
 
 [node name="Flag_Container" type="Node2D" parent="."]
 
@@ -238,31 +238,6 @@ position = Vector2( 1249, 309 )
 [node name="Bus_STOP" parent="." instance=ExtResource( 9 )]
 position = Vector2( 1633, 304 )
 
-[node name="map" type="ColorRect" parent="Bus_STOP"]
-visible = false
-margin_left = -97.0
-margin_top = -78.0
-margin_right = 83.0
-margin_bottom = 16.0
-color = Color( 0.627451, 0.407843, 0.407843, 1 )
-
-[node name="Label" type="Label" parent="Bus_STOP"]
-visible = false
-margin_left = -93.0
-margin_top = -74.0
-margin_right = -3.0
-margin_bottom = -60.0
-text = "Hit the button"
-
-[node name="Button" type="Button" parent="Bus_STOP"]
-visible = false
-margin_left = -90.0
-margin_top = -53.0
-margin_right = -19.0
-margin_bottom = -33.0
-text = "STown"
-
 [connection signal="mouse_entered" from="Weapons_Container/Cannon" to="Weapons_Container" method="_on_Cannon_mouse_entered"]
 [connection signal="mouse_entered" from="Weapons_Container/Pasta_Trap" to="Weapons_Container" method="_on_Trap_mouse_entered"]
 [connection signal="mouse_entered" from="Weapons_Container/Pasta_Trap2" to="Weapons_Container" method="_on_Trap2_mouse_entered"]
-[connection signal="pressed" from="Bus_STOP/Button" to="Bus_STOP" method="_on_Button_pressed"]

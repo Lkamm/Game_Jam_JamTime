@@ -24,9 +24,10 @@ func trap(body):
 
 func _on_Area2D_body_entered(body):
 	trap(body)
-	timer.start()
+	$Timer.start()
+
+
 
 
 func _on_Timer_timeout():
-	uses-=
-	body.speed(10)
+	passs

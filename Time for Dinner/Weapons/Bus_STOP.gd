@@ -18,31 +18,18 @@ func _ready():
 
 func _on_Area2D_mouse_entered():
 		$map.show()
-		$Label.show()
-		$Stown.show()
-		$Cakeville.show()
 		$Restaurant.show()
-	
+		$Cakeville.show()
+		$Stown.show()
+		
 
-	
 
 func _on_Restaurant_pressed():
-	$map.hide()
-	$Label.hide()
-	$Button.hide()
 	var scene = get_tree().change_scene("res://Game.tscn")
 
 
-func _on_Stown_pressed():
-	$map.hide()
-	$Label.hide()
-	$Button.hide()
-	var scene = get_tree().change_scene("res://Areas/Stown.tscn")
-
-
-
 func _on_Cakeville_pressed():
-	$map.hide()
-	$Label.hide()
-	$Button.hide()
 	var scene = get_tree().change_scene("res://Areas/Cakeville.tscn")
+
+func _on_Stown_pressed():
+	var scene = get_tree().change_scene("res://Areas/Stown.tscn")
