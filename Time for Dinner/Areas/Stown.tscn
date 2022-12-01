@@ -181,8 +181,27 @@ position = Vector2( 7000, 280 )
 
 [node name="Food_Pasta" parent="Ingredients_Container" instance=ExtResource( 9 )]
 visible = false
-
+position = Vector2( 7100, 280 )
 
 [node name="Food_Pasta2" parent="Ingredients_Container" instance=ExtResource( 9 )]
 visible = false
+position = Vector2( 7200, 280 )
 
+[node name="Food_Pasta3" parent="Ingredients_Container" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 7300, 280 )
+
+[node name="Food_Pasta4" parent="Ingredients_Container" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 7400, 280 )
+
+[node name="Food_Pasta5" parent="Ingredients_Container" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 7500, 280 )
+
+[node name="Food_Pasta6" parent="Ingredients_Container" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 7600, 280 )
+
+[node name="Bus_STOP" parent="." instance=ExtResource( 12 )]
+position = Vector2( 0, 175 )

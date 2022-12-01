@@ -130,8 +130,10 @@ text = "Quit"
 position = Vector2( 508, 86 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 15 )
-frame = 1
+frame = 2
 playing = true
+
+[node name="Sprite" type="Sprite" parent="."]
 
 [connection signal="pressed" from="ColorRect/Play" to="." method="_on_Play_pressed"]
 [connection signal="pressed" from="ColorRect/Quit" to="." method="_on_Quit_pressed"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://Assets/pasta_flloor.png" type="Texture" id=1]
 [ext_resource path="res://icon.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Weapons/Bus_STOP.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Weapons/MeatCannon.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Weapons/Pasta_Trap.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Game.gd" type="Script" id=12]
 
 [sub_resource type="NavigationPolygon" id=6]
 vertices = PoolVector2Array( -176, -784, -176, -448, -192, 192 )
@@ -126,6 +127,7 @@ points = PoolVector2Array( 64, 64, 0, 64, 0, 0, 64, 0 )
 [sub_resource type="CircleShape2D" id=11]
 
 [node name="Game" type="Node2D"]
+script = ExtResource( 12 )
 
 [node name="Sprite" type="Sprite" parent="."]
 
@@ -191,6 +193,7 @@ position = Vector2( 750, 300 )
 shape = SubResource( 9 )
 
 [node name="Label" type="Label" parent="Weapons_Container/Cannon"]
+visible = false
 margin_right = 40.0
 margin_bottom = 14.0
 text = "Meatball Cannon: Costs 2 Sauce"
@@ -205,11 +208,13 @@ position = Vector2( 1250, 300 )
 shape = SubResource( 10 )
 
 [node name="Label" type="Label" parent="Weapons_Container/Pasta_Trap"]
+visible = false
 margin_right = 40.0
 margin_bottom = 14.0
 text = "Pasta Trap: Costs 1 Pasta"
 
 [node name="Pasta_Trap" parent="Weapons_Container/Pasta_Trap" instance=ExtResource( 11 )]
+visible = false
 
 [node name="Pasta_Trap2" type="Area2D" parent="Weapons_Container"]
 position = Vector2( 1000, 300 )
@@ -218,11 +223,13 @@ position = Vector2( 1000, 300 )
 shape = SubResource( 11 )
 
 [node name="Label" type="Label" parent="Weapons_Container/Pasta_Trap2"]
+visible = false
 margin_right = 40.0
 margin_bottom = 14.0
 text = "Pasta Trap: Costs 1 Pasta"
 
 [node name="Pasta_Trap" parent="Weapons_Container/Pasta_Trap2" instance=ExtResource( 11 )]
+visible = false
 
 [node name="Flag_Container" type="Node2D" parent="."]
 
