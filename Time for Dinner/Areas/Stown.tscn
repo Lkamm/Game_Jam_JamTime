@@ -59,7 +59,8 @@ navpoly = SubResource( 6 )
 environment = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 120.0
+wait_time = 20.0
+autostart = true
 
 [node name="Background" type="TileMap" parent="."]
 tile_set = SubResource( 3 )
@@ -203,13 +204,3 @@ position = Vector2( 7600, 280 )
 visible = false
 position = Vector2( 7700, 280 )
 
-[node name="Bus_STOP" parent="." instance=ExtResource( 12 )]
-position = Vector2( 8016, 296 )
-
-[node name="Label" type="Label" parent="Bus_STOP"]
-visible = false
-margin_left = -44.0
-margin_top = -125.0
-margin_right = 41.0
-margin_bottom = -111.0
-text = "You did it!"
