@@ -30,6 +30,7 @@ var should_direction_flip = true # wether or not player controls (left/right) ca
 
 func _physics_process(_delta):
 	velocity.x = clamp(velocity.x,-max_move,max_move)
+	Global.health = health
 		
 	if should_direction_flip:
 		if direction < 0 and not $AnimatedSprite.flip_h: $AnimatedSprite.flip_h = true

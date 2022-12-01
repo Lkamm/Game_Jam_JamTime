@@ -5,6 +5,7 @@ var Ingredients = []
 var day = 1
 var score = 0
 var lives = 5
+var health = 0
 var end = false
 
 func _unhandled_input(_event):
