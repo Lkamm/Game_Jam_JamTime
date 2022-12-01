@@ -8,6 +8,8 @@
 [sub_resource type="CircleShape2D" id=1]
 
 [node name="Food_Sauce" type="StaticBody2D"]
+collision_layer = 0
+collision_mask = 0
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
