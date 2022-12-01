@@ -203,11 +203,10 @@ position = Vector2( 7600, 280 )
 visible = false
 position = Vector2( 7700, 280 )
 
-[node name="CanvasModulate" type="CanvasModulate" parent="."]
-visible = false
-color = Color( 0.12549, 0.137255, 0.203922, 1 )
-
 [node name="Bus_STOP" parent="." instance=ExtResource( 12 )]
 position = Vector2( 7993, 305 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+color = Color( 0.12549, 0.133333, 0.203922, 1 )
 
 [connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
