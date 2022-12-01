@@ -21,6 +21,7 @@ Features
 Assets, or resources used
 
 ## References
+Player character code pulled from https://github.com/B-Sheley/04-2D-Platformer
 
 ## Future Development
 
@@ -35,3 +36,5 @@ Garret Bigs: Programmer:
 Brandon Sheley: Programmer:
 
 # ScreenShot
+
+![Screenshot_20221201_055407](https://user-images.githubusercontent.com/112135501/205176474-6f6534ee-3926-4dcf-8532-1577a570debe.png)
