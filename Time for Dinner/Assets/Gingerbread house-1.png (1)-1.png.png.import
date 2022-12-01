@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/GingerBread_Floor.png-43abe0a005f38817398bd3700d592415.stex"
+path="res://.import/Gingerbread house-1.png (1)-1.png.png-292dff04912ad9221b2927e4570020e7.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/GingerBread_Floor.png"
-dest_files=[ "res://.import/GingerBread_Floor.png-43abe0a005f38817398bd3700d592415.stex" ]
+source_file="res://Assets/Gingerbread house-1.png (1)-1.png.png"
+dest_files=[ "res://.import/Gingerbread house-1.png (1)-1.png.png-292dff04912ad9221b2927e4570020e7.stex" ]
 
 [params]
 
