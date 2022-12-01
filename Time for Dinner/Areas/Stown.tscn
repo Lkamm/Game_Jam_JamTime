@@ -57,7 +57,8 @@ navpoly = SubResource( 6 )
 environment = SubResource( 1 )
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 120.0
+wait_time = 20.0
+autostart = true
 
 [node name="Background" type="TileMap" parent="."]
 tile_set = SubResource( 3 )
@@ -200,3 +201,9 @@ position = Vector2( 7600, 280 )
 [node name="Food_Pasta6" parent="Ingredients_Container" instance=ExtResource( 9 )]
 visible = false
 position = Vector2( 7700, 280 )
+
+[node name="CanvasModulate" type="CanvasModulate" parent="."]
+visible = false
+color = Color( 0.12549, 0.137255, 0.203922, 1 )
+
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
