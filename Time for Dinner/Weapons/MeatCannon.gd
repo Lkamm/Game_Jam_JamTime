@@ -1,6 +1,6 @@
 extends StaticBody2D
 
-var meatball = load("res://Weapons/MeatBall")
+var Meatball = load("res://Weapons/MeatCannonBall")
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -15,8 +15,11 @@ func _ready():
 #func _process(delta):
 #	pass
 func _shoot():
-	var Meatball = meatball.instance()
-	add_child(Meatball)
+	var Weapon_Container = get_node_or_null("/root/Game/Weapon_Container")
+	if Weapon_Container != null:
+		var meatball = Meatball.instance()
+		meatball.position = position + Vector2(45,0)
+		Weapon_Container.add_child(meatball)
 	
 
 func _on_Timer_timeout():

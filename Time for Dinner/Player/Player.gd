@@ -30,6 +30,7 @@ var should_direction_flip = true # wether or not player controls (left/right) ca
 
 func _physics_process(_delta):
 	velocity.x = clamp(velocity.x,-max_move,max_move)
+	Global.health = health
 		
 	if should_direction_flip:
 		if direction < 0 and not $AnimatedSprite.flip_h: $AnimatedSprite.flip_h = true
@@ -78,7 +79,14 @@ func _unhandled_input(event):
 		shoot()
 
 func shoot():
-	pass
+	var Weapon_Container = get_node_or_null("/root/Game/Weapon_Container")
+	if Weapon_Container != null:
+		var cookie = Cookie.instance()
+		cookie.position = position
+		if direction < 0:
+			cookie.velocity.x *= -1
+		Weapon_Container.add_child(cookie)
+
 	
 
 

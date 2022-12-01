@@ -15,11 +15,9 @@ func _physics_process(_delta):
 
 
 func _on_Cookie_body_entered(body):
-	if body.name == "Player":
-		if body.has_method("do_damage"):
-			body.do_damage(damage)
-			queue_free()
-
+	if body.has_method("hp"):
+		body.hp(damage)
+		queue_free()
 
 func _on_Timer_timeout():
 	queue_free()

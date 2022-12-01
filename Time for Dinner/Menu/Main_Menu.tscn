@@ -130,7 +130,7 @@ text = "Quit"
 position = Vector2( 508, 86 )
 scale = Vector2( 5, 5 )
 frames = SubResource( 15 )
-frame = 2
+
 playing = true
 
 [node name="Sprite" type="Sprite" parent="."]
