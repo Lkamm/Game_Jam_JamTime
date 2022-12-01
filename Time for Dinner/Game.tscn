@@ -174,7 +174,6 @@ limit_bottom = 300
 script = ExtResource( 4 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-visible = false
 
 [node name="HUD" type="Control" parent="CanvasLayer"]
 margin_right = 40.0
