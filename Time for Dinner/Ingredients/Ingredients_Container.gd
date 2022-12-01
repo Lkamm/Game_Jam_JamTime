@@ -1,10 +1,12 @@
 extends Node2D
 
+onready var pasta = load("res://Ingredients/Food_Sauce.tscn")
+onready var sauce = load("res://Ingredients/Food_Sauce.tscn")
+var enemies = get_node_or_null("res/Game/Enemy_Container")
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
+func _physics_process(delta):
+	if enemies.get_child_count() == 0:
+		$Food_Pasta/CollisionShape2D.show()
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

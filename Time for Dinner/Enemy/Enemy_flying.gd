@@ -10,7 +10,11 @@ export var look_speed = 75
 var line_of_sight = false
 var Effects = null
 var score = 10
-var meatball = load("res://Weapons/MeatBall.tscn")
+onready var meatball = load("res://Weapons/MeatBall.tscn")
+onready var Pasta = load("res://Ingredients/Food_Pasta.tscn")
+var Pasta_load = position
+
+
 func _physics_process(_delta):
 	if Global.player == null:
 		Global.player = get_node_or_null("/root/Game/Player_Container/Player")
@@ -34,8 +38,8 @@ func hp(d):
 		d = 1
 	health -= d
 	if health <= 0:
-		queue_free()
 		Global.update_score(100)
+		queue_free()
 
 
 func _on_Timer_timeout():
