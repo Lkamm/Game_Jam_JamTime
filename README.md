@@ -10,6 +10,7 @@ Objective: Kill and collect needed Ingredients in order defend oneself against h
 
 Game-play instructions:
 2D platformer: WASD and [Space]
+Tower Defence: WASD and [Click]
 
 ## Impediments
 Struggles or surprises you encountered during the development of the game
@@ -25,12 +26,12 @@ Assets, or resources used
 
 # Created by: Daniel's Gremlins
 
-Daniel Gramling: Sprite Artist
+Daniel Gramling: Sprite Artist:
 
-Crystal Liou: Sound
+Crystal Liou: Sound and Sprite Artist:
 
-Garret Bigs: Programmer
+Garret Bigs: Programmer:
 
-Brandon Sheley: Programmer
+Brandon Sheley: Programmer:
 
 # ScreenShot
