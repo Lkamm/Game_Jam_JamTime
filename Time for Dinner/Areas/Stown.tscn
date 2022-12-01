@@ -217,11 +217,7 @@ script = ExtResource( 8 )
 [node name="Food_Pasta" parent="Ingredients_Container" instance=ExtResource( 9 )]
 visible = false
 position = Vector2( 4000, 250 )
-collision_layer = 0
-collision_mask = 0
 
 [node name="Food_Sauce" parent="Ingredients_Container" instance=ExtResource( 10 )]
 visible = false
 position = Vector2( 4500, 250 )
-collision_layer = 0
-collision_mask = 0
