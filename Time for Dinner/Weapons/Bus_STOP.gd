@@ -21,7 +21,9 @@ func _on_Area2D_mouse_entered():
 		$Restaurant.show()
 		$Cakeville.show()
 		$Stown.show()
-		
+		var bus_sound = get_node_or_null("/root/Game/Bus_Sound")
+		if bus_sound != null:
+			bus_sound.play()
 
 
 func _on_Restaurant_pressed():

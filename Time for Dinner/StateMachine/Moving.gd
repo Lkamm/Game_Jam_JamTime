@@ -28,3 +28,6 @@ func physics_process(_delta):
 	else:
 		player.velocity = Vector2.ZERO
 		SM.set_state("Idle")
+	var walking_sound = get_node_or_null("/root/Game/Walking_Sound")
+	if walking_sound != null:
+		walking_sound.play()

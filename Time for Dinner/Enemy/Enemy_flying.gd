@@ -27,6 +27,9 @@ func _physics_process(_delta):
 				velocity = ray.cast_to.normalized()*speed
 			move_and_slide(velocity, Vector2(0,0))
 		Global.player = null
+	var bat_sound = get_node_or_null("/root/Game/Bat_Sound")
+	if bat_sound != null:
+		bat_sound.play()
 
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":

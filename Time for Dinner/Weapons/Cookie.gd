@@ -12,6 +12,9 @@ func _ready():
 
 func _physics_process(_delta):
 	position += velocity
+	var bullet_sound = get_node_or_null("/root/Game/Bullet_Sound")
+	if bullet_sound != null:
+		bullet_sound.play()
 
 
 func _on_Cookie_body_entered(body):

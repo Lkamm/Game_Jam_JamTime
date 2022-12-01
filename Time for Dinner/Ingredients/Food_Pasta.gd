@@ -21,4 +21,7 @@ func _on_Area2D_body_entered(body):
 		Global.Ingredients.append(food)
 		queue_free()
 		print(Global.Ingredients)
+	var in_sound = get_node_or_null("/root/Game/In_Sound")
+	if in_sound != null:
+		in_sound.play()
 	pass

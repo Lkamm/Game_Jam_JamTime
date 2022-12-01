@@ -20,7 +20,9 @@ func _shoot():
 		var meatball = Meatball.instance()
 		meatball.position = position + Vector2(45,0)
 		Weapon_Container.add_child(meatball)
-	
+	var canon_sound = get_node_or_null("/root/Game/Canon_Sound")
+	if canon_sound != null:
+		canon_sound.play()
 
 func _on_Timer_timeout():
 	_shoot()
