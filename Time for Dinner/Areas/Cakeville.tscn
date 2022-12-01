@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="TileSet" id=1]
+
+[node name="Cakeville" type="Node2D"]
+
+[node name="Background" type="TileMap" parent="."]
+format = 1
+
+[node name="Platform" type="TileMap" parent="."]
+tile_set = SubResource( 1 )
+format = 1
+
+[node name="Enemy_Container" type="Node2D" parent="."]
+
+[node name="Player_Container" type="Node2D" parent="."]
+
+[node name="Ingredients_Container" type="Node2D" parent="."]
