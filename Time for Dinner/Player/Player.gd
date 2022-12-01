@@ -78,7 +78,14 @@ func _unhandled_input(event):
 		shoot()
 
 func shoot():
-	pass
+	var Weapon_Container = get_node_or_null("/root/Game/Weapon_Container")
+	if Weapon_Container != null:
+		var cookie = Cookie.instance()
+		cookie.position = position
+		if direction < 0:
+			cookie.velocity.x *= -1
+		Weapon_Container.add_child(cookie)
+
 	
 
 

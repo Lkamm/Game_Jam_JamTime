@@ -8,6 +8,9 @@ var health = 15
 var defense = 5
 var score = 5
 var sauce = load("res://Ingredients/Food_Sauce.tscn")
+onready var Meatball = load("res://Weapons/MeatBall.tscn")
+
+
 func _physics_process(_delta):
 	if not $Tween.is_active():
 		$Sprite.play()
@@ -35,3 +38,11 @@ func hp(d):
 func _on_Area2D_body_entered(body):
 	if body.name == "Player":
 		body.do_damage(dmg)
+
+
+func _on_Timer_timeout():
+	var Weapon_Container = get_node_or_null("/root/Game/Weapon_Container")
+	if Weapon_Container != null:
+		var meatball = Meatball.instance()
+		meatball.position = position + Vector2(45,0)
+		Weapon_Container.add_child(meatball)
