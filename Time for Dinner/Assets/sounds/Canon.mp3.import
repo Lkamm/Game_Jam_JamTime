@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Canon.mp3-0f8a2cfc902ab986638885adc1872ede.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/Canon.mp3"
+dest_files=[ "res://.import/Canon.mp3-0f8a2cfc902ab986638885adc1872ede.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

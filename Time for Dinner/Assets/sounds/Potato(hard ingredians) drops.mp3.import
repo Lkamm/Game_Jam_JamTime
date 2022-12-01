@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Potato(hard ingredians) drops.mp3-52a198c8eeaf80c4a9af223e4b2246b0.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/Potato(hard ingredians) drops.mp3"
+dest_files=[ "res://.import/Potato(hard ingredians) drops.mp3-52a198c8eeaf80c4a9af223e4b2246b0.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

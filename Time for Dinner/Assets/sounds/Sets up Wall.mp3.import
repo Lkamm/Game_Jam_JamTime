@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Sets up Wall.mp3-7462adc1883fc5aa0b9957730a510f07.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/Sets up Wall.mp3"
+dest_files=[ "res://.import/Sets up Wall.mp3-7462adc1883fc5aa0b9957730a510f07.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Wall material drops.mp3-e51ee997d7f00c2b2dc9ebb88ac278cd.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/Wall material drops.mp3"
+dest_files=[ "res://.import/Wall material drops.mp3-e51ee997d7f00c2b2dc9ebb88ac278cd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wave sword.mp3-365f9a1cf9c98a8afad6a14905fec313.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/wave sword.mp3"
+dest_files=[ "res://.import/wave sword.mp3-365f9a1cf9c98a8afad6a14905fec313.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/Burp for coca cola.mp3-77fb01c2cff35774ba2e810f2b796b7a.mp3str"
+
+[deps]
+
+source_file="res://Assets/sounds/Burp for coca cola.mp3"
+dest_files=[ "res://.import/Burp for coca cola.mp3-77fb01c2cff35774ba2e810f2b796b7a.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
