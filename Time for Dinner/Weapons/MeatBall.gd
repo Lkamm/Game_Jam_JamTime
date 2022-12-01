@@ -1,31 +1,22 @@
-extends KinematicBody2D
+extends Area2D
 
-var velocity = Vector2.ZERO
-var speed = 500.0
-var damage = 10
+var damage = 5
+var velocity = Vector2(10,0)
 
-onready var Explosion = load("res://Effects/Explosion.tscn")
-var Effects = null
+onready var timer = $Timer
+
+
 
 func _ready():
-	velocity = Vector2(0,-speed).rotated(rotation)
+	pass
 
 func _physics_process(_delta):
-	velocity = move_and_slide(velocity, Vector2.ZERO)
-	position.x = wrapf(position.x, 0, Global.VP.x)
-	position.y = wrapf(position.y, 0, Global.VP.y)
-	
+	position += velocity
 
 
-func _on_Area2D_body_entered(body):
-	if body.name != "Enemy":
-		if body.has_method("damage"):
-			body.damage(damage)
-		Effects = get_node_or_null("/root/Game/Effects")
-		#if Effects != null:
-		#	var explosion = Explosion.instance()
-		#	Effects.add_child(explosion)
-		#	explosion.global_position = global_position
+func _on_Cookie_body_entered(body):
+	if body.has_method("hp"):
+		body.hp(damage)
 		queue_free()
 
 
