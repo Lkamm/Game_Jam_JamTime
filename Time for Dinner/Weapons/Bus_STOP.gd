@@ -17,19 +17,30 @@ func _ready():
 
 
 func _on_Area2D_mouse_entered():
-		$map.show()
-		$Restaurant.show()
-		$Cakeville.show()
-		$Stown.show()
+		$Map_Container/map.show()
+		$Map_Container/Restaurant.show()
+		$Map_Container/Cakeville.show()
+		$Map_Container/Stown.show()
 		
 
 
 func _on_Restaurant_pressed():
-	var scene = get_tree().change_scene("res://Game.tscn")
+	print("restaurant")
+	var _scene = get_tree().change_scene("res://Game.tscn")
 
 
 func _on_Cakeville_pressed():
-	var scene = get_tree().change_scene("res://Areas/Cakeville.tscn")
+	var _scene = get_tree().change_scene("res://Areas/Cakeville.tscn")
 
 func _on_Stown_pressed():
-	var scene = get_tree().change_scene("res://Areas/Stown.tscn")
+	var _scene = get_tree().change_scene("res://Areas/Stown.tscn")
+
+
+func _on_Area2D_body_entered(body):
+	if body.name == "Player":
+		print("Showing")
+		$Map_Container/map.show()
+		$Map_Container/Restaurant.show()
+		$Map_Container/Cakeville.show()
+		$Map_Container/Stown.show()
+	

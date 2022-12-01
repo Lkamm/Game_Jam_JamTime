@@ -63,14 +63,14 @@ func _physics_process(delta):
 		$Ingredients_Container/Food_Sauce4.collision_mask = 1
 		$Ingredients_Container/Food_Sauce4/Area2D.collision_layer = 1
 		$Ingredients_Container/Food_Sauce4/Area2D.collision_mask = 1
-		
+		#Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)
 		enemy_check = true
-
+		$Bus_STOP/Map_Container.offset = $Bus_STOP.global_position
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	$Bus_STOP/Map_Container.offset = Vector2(100,300)
+	
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):

@@ -14,16 +14,13 @@ func _ready():
 	pass # Replace with function body.
 
 func trap(body):
-	pass
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
+#	body.speed(5)
+	uses = uses -1
 func _on_Area2D_body_entered(body):
-	trap(body)
-	$Timer.start()
-
+	if uses != 0:
+		trap(body)
+		$Timer.start()
+	pass
 
 
 

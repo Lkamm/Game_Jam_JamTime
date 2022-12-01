@@ -180,6 +180,3 @@ position = Vector2( 7000, 280 )
 
 [node name="Food_Pasta" parent="Ingredients_Container" instance=ExtResource( 9 )]
 visible = false
-
-[node name="Food_Pasta2" parent="Ingredients_Container" instance=ExtResource( 9 )]
-visible = false
