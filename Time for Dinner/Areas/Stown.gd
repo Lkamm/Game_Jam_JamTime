@@ -1,6 +1,6 @@
 extends Node2D
 var enemy_check = false
-
+var Ingredients_Container = get_node_or_null("res://Game/Ingredients_Container")
 func _physics_process(delta):
 	$Enemy_Container.get_child_count()
 	if $Enemy_Container.get_child_count() == 0 and enemy_check == false:
@@ -64,8 +64,9 @@ func _physics_process(delta):
 		$Ingredients_Container/Food_Sauce4/Area2D.collision_layer = 1
 		$Ingredients_Container/Food_Sauce4/Area2D.collision_mask = 1
 		
-		enemy_check = true
-
+		$Flag/Label.show()
+		
+		
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
