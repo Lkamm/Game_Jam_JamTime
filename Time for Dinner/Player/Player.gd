@@ -121,10 +121,12 @@ func do_damage(d):
 		d = 1
 	health -= d
 	if health <= 0:
+		Global.lives -= 1
 		Global.player = null
 		queue_free()
 
 func die():
+	Global.lives -= 1
 	Global.player = null
 	queue_free()
 

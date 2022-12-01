@@ -4,7 +4,8 @@ var cannon = load("res://Weapons/MeatCannon.tscn")
 var trap = load("res://Weapons/PastaTrap.tscn")
 var Player = get_node_or_null("/root/Game/Player_Container/Player")
 func _on_Cannon_mouse_entered():
-	if Input.is_action_pressed("interact") and "Sauce" in Global.Ingredients:
+	$label.show()
+	if Input.is_action_pressed("attack") and "Sauce" in Global.Ingredients:
 		var cannons = cannon.instance()
 		cannons.global.position = Vector2(750, 300)
 		$Cannon.show()
@@ -12,10 +13,16 @@ func _on_Cannon_mouse_entered():
 
 
 func _on_Trap_mouse_entered():
-	if Input.is_action_just_pressed("interact") and "Pasta" in Global.Ingredients:
-		var Trap = trap.instance()
-	pass # Replace with function body.
+	$Label.show()
+	if Input.is_action_just_pressed("attack") and "Pasta" in Global.Ingredients:
+		$Pasta_Trap/Pasta_Trap/Sprite.show()
+		$Pasta_Trap/Pasta_Trap/CollisionShape2D.disabled = false
+
 
 
 func _on_Trap2_mouse_entered():
-	pass # Replace with function body.
+	$Label.show()
+	if Input.is_action_just_pressed("attack") and "Pasta" in Global.Ingredients:
+		$Pasta_Trap2/Pasta_Trap/Sprite.show()
+		$Pasta_Trap2/Pasta_Trap/CollisionShape2D.disabled = false 
+		

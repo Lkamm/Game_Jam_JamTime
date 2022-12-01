@@ -1,9 +1,6 @@
 extends StaticBody2D
 
-var damage = 10
-var health = 100
-var uses = 5
-
+var food = "Cake"
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -13,19 +10,16 @@ var uses = 5
 func _ready():
 	pass # Replace with function body.
 
-func trap(body):
-	pass
+
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
 
 
 func _on_Area2D_body_entered(body):
-	trap(body)
-	$Timer.start()
-
-
-
-
-func _on_Timer_timeout():
+	if body.name == "Player":
+		Global.Ingredients.append(food)
+		queue_free()
+		print(Global.Ingredients)
 	pass
+	

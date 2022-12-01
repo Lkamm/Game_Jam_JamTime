@@ -17,9 +17,19 @@ func _ready():
 
 
 func _on_Area2D_mouse_entered():
-	#if Input.get_action_pressed("interact"):
-		#map.show()
-		#if Input.get_action_pressed()
-		#var scene = get_tree.change_scene("res://Areas/Stown.tscn")
-		#if Input.get_action_pressed()
-		#var scene = get_tree.change_scene("res://Areas/Cakevill.tscn")
+		$map.show()
+		$Restaurant.show()
+		$Cakeville.show()
+		$Stown.show()
+		
+
+
+func _on_Restaurant_pressed():
+	var scene = get_tree().change_scene("res://Game.tscn")
+
+
+func _on_Cakeville_pressed():
+	var scene = get_tree().change_scene("res://Areas/Cakeville.tscn")
+
+func _on_Stown_pressed():
+	var scene = get_tree().change_scene("res://Areas/Stown.tscn")
