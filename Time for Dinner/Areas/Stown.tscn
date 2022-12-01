@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://StateMachine/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player_Container.gd" type="Script" id=2]
@@ -7,7 +7,9 @@
 [ext_resource path="res://Assets/Kitchen floor (1).png" type="Texture" id=5]
 [ext_resource path="res://Enemy/Enemy_ground.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Enemy/Enemy_flying.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Ingredients/Food_Sauce.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Ingredients/Ingredients_Container.gd" type="Script" id=8]
+[ext_resource path="res://Ingredients/Food_Pasta.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Ingredients/Food_Sauce.tscn" type="PackedScene" id=10]
 
 [sub_resource type="NavigationPolygon" id=6]
 vertices = PoolVector2Array( 4704, -752, 4704, 392, 3928, 384, 3896, 256, 3016, -752, 2160, 248, -120, -776, -120, -208, 2136, 312, 568, 312, -104, 376, 552, 392 )
@@ -208,6 +210,12 @@ margin_bottom = 40.0
 [node name="Effects" type="Node2D" parent="."]
 
 [node name="Ingredients_Container" type="Node2D" parent="."]
+script = ExtResource( 8 )
 
-[node name="Food_Sauce" parent="Ingredients_Container" instance=ExtResource( 8 )]
-position = Vector2( 4400, -10 )
+[node name="Food_Pasta" parent="Ingredients_Container" instance=ExtResource( 9 )]
+visible = false
+position = Vector2( 4000, 250 )
+
+[node name="Food_Sauce" parent="Ingredients_Container" instance=ExtResource( 10 )]
+visible = false
+position = Vector2( 4500, 250 )

@@ -1,18 +1,19 @@
 extends Node2D
 
-var Enemy = load("res://Enemy/Enemy_Glutton")
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+onready var pasta = load("res://Ingredients/Food_Sauce.tscn")
+onready var sauce = load("res://Ingredients/Food_Sauce.tscn")
+var Ingredients = get_node_or_null("res/Game/Ingredients_Container")
 
+func _physics_process(delta):
+	pass
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	pass # Replace with function body.
 
-func _physics_process(delta):
-	if get_child_count() == 1:
-		var enemy = Enemy.instance()
-		enemy.position = Vector2(randf()*Global.VP.x, randf()*Global.VP.y)
-		add_child(enemy)
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+#func _process(delta):
+#	pass
+
 

@@ -1,6 +1,6 @@
-extends StaticBody2D
+extends Node2D
 
-var food = "Pasta"
+
 # Declare member variables here. Examples:
 # var a = 2
 # var b = "text"
@@ -14,11 +14,3 @@ func _ready():
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 #func _process(delta):
 #	pass
-
-
-func _on_Area2D_body_entered(body):
-	if body.name == "Player":
-		Global.Ingredients.append(food)
-		queue_free()
-		print(Global.Ingredients)
-	pass
