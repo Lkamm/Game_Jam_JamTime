@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://StateMachine/Camera.gd" type="Script" id=1]
 [ext_resource path="res://Player/Player_Container.gd" type="Script" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://Ingredients/Food_Pasta.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Ingredients/Food_Sauce.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Areas/Stown.gd" type="Script" id=11]
+[ext_resource path="res://Weapons/Flag.tscn" type="PackedScene" id=12]
 
 [sub_resource type="NavigationPolygon" id=6]
 vertices = PoolVector2Array( 6096, -320, 6160, 0, 4544, 0, 4368, -64, 4368, -128, 4480, -320, 6096, -384, 8120, -1040, 8128, 320, 6408, 256, 6352, 192, 1736, 64, 1736, 0, 2112, 0, 2056, 64, 4552, 64, 4480, 64, 3008, -64, 4416, 128, 4424, 192, 4352, 192, 2896, 128, 2824, 64, 2768, 0, 2120, 64, 5904, -384, 5904, -448, 4672, -448, 4672, -384, 4480, -384, 6352, 256, 4248, -128, 4248, -192, 4112, -192, 4112, -256, 3984, -320, 3920, -320, 3920, -384, 3584, -384, 3584, -320, 3456, -320, 3456, -256, 3328, -256, 3328, -192, 3200, -192, 3200, -128, 3008, -128, 4480, 128, 4352, 256, 2896, 256, 2768, 64, 2056, 128, 1984, 128, 1984, 192, 1856, 192, 320, 64, 1856, 256, 208, 256, 208, 192, -112, 192, -112, -384, 328, 0, -104, -984, 6416, 320, 6296, 192, 6288, 128, 6224, 128, 6216, 64, 6168, 64, 3992, -256, 2832, 128 )
@@ -51,6 +52,7 @@ script = ExtResource( 11 )
 [node name="Navigation2D" type="Navigation2D" parent="."]
 
 [node name="NavigationPolygonInstance" type="NavigationPolygonInstance" parent="Navigation2D"]
+position = Vector2( 0, 1 )
 navpoly = SubResource( 6 )
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
@@ -200,3 +202,14 @@ position = Vector2( 7600, 280 )
 [node name="Food_Pasta6" parent="Ingredients_Container" instance=ExtResource( 9 )]
 visible = false
 position = Vector2( 7700, 280 )
+
+[node name="Flag" parent="." instance=ExtResource( 12 )]
+position = Vector2( 7951, 309 )
+
+[node name="Label" type="Label" parent="Flag"]
+visible = false
+margin_left = -36.0
+margin_top = -76.0
+margin_right = 40.0
+margin_bottom = -59.0
+text = "You did it! Keep it up!"
