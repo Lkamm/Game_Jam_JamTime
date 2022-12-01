@@ -64,18 +64,6 @@ func _physics_process(delta):
 		$Ingredients_Container/Food_Sauce4/Area2D.collision_layer = 1
 		$Ingredients_Container/Food_Sauce4/Area2D.collision_mask = 1
 		
-		$Ingredients_Container/Food_Sauce5.show()
-		$Ingredients_Container/Food_Sauce5.collision_layer = 1
-		$Ingredients_Container/Food_Sauce5.collision_mask = 1
-		$Ingredients_Container/Food_Sauce5/Area2D.collision_layer = 1
-		$Ingredients_Container/Food_Sauce5/Area2D.collision_mask = 1
-		
-		$Ingredients_Container/Food_Sauce6.show()
-		$Ingredients_Container/Food_Sauce6.collision_layer = 1
-		$Ingredients_Container/Food_Sauce6.collision_mask = 1
-		$Ingredients_Container/Food_Sauce6/Area2D.collision_layer = 1
-		$Ingredients_Container/Food_Sauce6/Area2D.collision_mask = 1
-		
 		enemy_check = true
 
 
